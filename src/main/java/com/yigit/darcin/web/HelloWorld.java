@@ -7,7 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorld {
 
     @RequestMapping("/")
-    public String hello(){
-        return "Hello?2";
+    public String hello() {
+        return "Hello?";
     }
+
+    @RequestMapping("/throwMe")
+    public String exception() {
+        throw new IllegalArgumentException("sorry mate");
+    }
+
+
 }
